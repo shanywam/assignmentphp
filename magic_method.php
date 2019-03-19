@@ -1,5 +1,5 @@
 <?php
-class FileUtil{
+class Files{
 
     private $handle;
     private $filename;
@@ -11,19 +11,22 @@ class FileUtil{
     }
 
 
-    public function __destruct(){
-        if($this->handle){
+    public function __destruct()
+    {
+        if($this->handle)
+        {
             fclose($this->handle);
         }
     }
 
-    public function display(){
+    public function display()
+    {
         echo fread($this->handle, filesize($this->filename));
     }
 }
 
-$fu = new FileUtil('./shan.txt', 'doc');
-$fu->display();
+$file = new Files('./shan.txt', 'doc');
+$file->display();
 ?>
 
 
