@@ -39,9 +39,9 @@ class DepartmentRep extends Student
     }
 }
 $classRep = new ClassRep();
-echo $classRep->displayName();
-echo $classRep->displayUnit();
+ $classRep->displayName();
+ $classRep->displayUnit();
 $departmentRep = new DepartmentRep();
-echo $departmentRep->displayName();
-echo $departmentRep->displayUnit();
+ $departmentRep->displayName();
+$departmentRep->displayUnit();
 ?>
