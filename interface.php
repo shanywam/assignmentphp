@@ -7,9 +7,15 @@ interface Color
 {
      public function colors();
 }
+class Type
+{
+    public function  varieties()
+    {
+        echo 'varieties of flowers';
+    }
+}
 
-
-class Rose implements Color,Flower
+class Rose extends Type implements Color,Flower
 {
     public function flowers()
     {
@@ -23,16 +29,18 @@ class Rose implements Color,Flower
         $color=['red'=>'poppy','white'=>'lily'];
         unset ($color['white']);
         var_dump($color, isset($color['red']));
-        print_r("color is   $color");
+        print_r( $color);
     }
-    public function displayColor()
-    {
-        echo 'display color';
-    }
+    //public function varieties()
+    //{
+      //  echo 'There are different varieties of flowers';
+   // }
 
 
 }
 $rose = new Rose();
 $rose->colors();
 $rose->flowers();
+$type= new Type();
+$type->varieties();
 ?>
