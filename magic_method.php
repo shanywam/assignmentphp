@@ -1,3 +1,4 @@
+/*
 <?php
 class Files{
 
@@ -22,10 +23,11 @@ class Files{
     public function display()
     {
         echo fread($this->handle, filesize($this->filename));
+
     }
 }
 
-$file = new Files('./shan.txt', 'doc');
+$file = new Files('/home/shantel/Projects/FIrstProject/shan.html', 'html');
 $file->display();
 ?>
 
@@ -52,4 +54,24 @@ $persons->firstName= 'shany';
     echo $persons->shany;
 $persons->lastName= 'wam';
     echo $persons->wam;
+?>
+
+<?php
+class Shan
+{
+    public $fruits='mango';
+
+    public function __construct($fruits)
+       {
+           $this->fruits=$fruits;
+       }
+
+    public function __isset($fruits)
+    {
+        echo 'The fruit is $fruits';
+    }
+
+}
+$fruits-> new Shan('mango');
+
 ?>

@@ -1,4 +1,5 @@
 <?php
+/*
 class Student
 {
     public  $studentName="";
@@ -50,4 +51,58 @@ $prefect->inClass();
 echo $prefect->studentName . " is " . ( $student->isPresent() ? "present" : "absent" ) . "<br><br>";
 $prefect->collectBooks( "History from the staffroom" );
 $prefect->chasedStudent( $student  );
-?>
+
+abstract class Shape
+{
+    abstract public function calculateArea();
+}
+
+class Circle extends Shape
+{
+    public function calculateArea()
+    {
+        $calculate=(3.14*10^2);
+        echo "area is   $calculate";
+    }
+
+    public function displayShape()
+    {
+        echo 'display shape';
+    }
+}
+$circle = new Circle();
+$circle->calculateArea();
+$circle->$calculate();
+*/
+ interface Shape
+{
+    public function calculateArea();
+}
+interface color
+{
+    public function colors();
+}
+
+class square implements Shape, color
+{
+    public function calculateArea()
+    {
+        $calculate=(10*10);
+        echo "area is   $calculate<br>";
+    }
+    public function colors()
+    {
+        $color=['red'=>'apple','yellow'=>'mango'];
+       unset ($color['yellow']);
+        var_dump($color, isset($color['red']));
+        echo "color is   $color";
+    }
+
+    public function displayShape()
+    {
+        echo 'display shape';
+    }
+}
+$square = new Square();
+$square->calculateArea();
+$square->colors();
