@@ -8,6 +8,7 @@ interface Color
      public function colors();
 }
 
+
 class Rose implements Color,Flower
 {
     public function flowers()
@@ -22,7 +23,7 @@ class Rose implements Color,Flower
         $color=['red'=>'poppy','white'=>'lily'];
         unset ($color['white']);
         var_dump($color, isset($color['red']));
-        echo "color is   $color";
+        print_r("color is   $color");
     }
     public function displayColor()
     {
