@@ -11,7 +11,7 @@ class Author extends User
 
     public function calcScores()
     {
-        echo " scores are  <br><br>" . ($this->noOfArticles * 5);
+        echo " this are the scores  <br><br>" . ($this->noOfArticles * 5);
        ;
     }
 }
