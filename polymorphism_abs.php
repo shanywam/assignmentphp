@@ -32,4 +32,67 @@ $author = new Author();
 $author->calcScores();
 $editor= new Editor();
 $editor->calcScores();
+
+?>
+
+<?php
+
+// implementation of polymorphism using interface
+
+
+
+ interface Student
+{
+
+    public function calcScores();
+
+}
+class Pupil implements Student
+{
+    public $scores;
+    public $assignment;
+    public $exam;
+
+    public function __construct($assignment,$exam)
+    {
+
+        $this -> assignment = $assignment;
+        $this -> exam = $exam;
+
+    }
+
+    public function calcScores()
+    {
+        $this->scores= $this -> assignment + $this -> exam;
+        echo "<br><br>sean's scores were $this->scores</br></br>";
+    }
+}
+class Scholar implements Student
+{
+    public $scores;
+    public $assignment;
+    public $exam;
+
+    public function __construct($assignment,$exam)
+    {
+
+        $this -> assignment = $assignment;
+        $this -> exam = $exam;
+
+    }
+
+    public function calcScores()
+    {
+        $this->scores= $this -> assignment + $this -> exam;
+        echo "jean's scores were $this->scores</br></br>";
+    }
+}
+
+$pupil = new Pupil('20', '70');
+$pupil->calcScores();
+
+$scholar = new Scholar('10', '50');
+$scholar->calcScores();
+
+
 ?>
